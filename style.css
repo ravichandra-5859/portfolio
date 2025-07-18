@@ -18,45 +18,33 @@ html {
     scroll-behavior: smooth;
 }
 /* Navigation Menu */
-/* ===== NAVIGATION BAR ===== */
 nav {
     display: flex;
     justify-content: space-between;
-    /* logo on left, links on right */
     align-items: center;
     background: #764ba2;
-    /* purple background */
     padding: 20px 40px;
     position: fixed;
-    /* stays at top while scrolling */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    /* keeps it above other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo/Name on left */
 nav h1 {
     color: #fff;
     font-size: 1.8em;
-    font-weight: 700;
     margin: 0;
 }
 
-/* Menu list */
 nav ul {
     list-style: none;
     display: flex;
-    /* horizontal layout */
     gap: 30px;
-    /* space between items */
     margin: 0;
     padding: 0;
 }
 
-/* Individual menu links */
 nav ul li a {
     text-decoration: none;
     color: #fff;
@@ -65,33 +53,12 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-/* Hover effect for links */
 nav ul li a:hover {
     color: #ffd166;
-    /* accent color on hover */
 }
 
-/* Add space below nav so content isn't hidden */
 body {
     padding-top: 80px;
-    /* adjust based on nav height */
-}
-
-/* ===== RESPONSIVE (Mobile) ===== */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        /* stack logo and menu on small screens */
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-        margin-top: 10px;
-    }
 }
 .theme-toggle {
     background: transparent;
