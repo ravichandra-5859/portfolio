@@ -4,7 +4,7 @@ Welcome to my personal portfolio website!
 This site showcases my skills, projects, and experience.
 
 ## 🚀 Live Demo
-[Click here to view my portfolio](https://<your-username>.github.io/<repo-name>/)
+[Click here to view my portfolio](https://ravichandra-5859.github.io/portfolio/)
 
 ## ✨ Features
 - Responsive design
