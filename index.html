@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
     <title>Ravichandra Pathi | Portfolio</title>
@@ -20,6 +20,7 @@
     <!-- Navigation Menu -->
     <header>
         <nav>
+            <div class="menu-toggle" id="menuToggle">☰</div>
             <h1>Ravichandra</h1>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -293,6 +294,13 @@
         this.reset(); // Clear the form
     });
 </script>
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.querySelector("nav ul");
 
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+</script>
 </body>
 </html>
