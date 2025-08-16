@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ravichandra Pathi — Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    }
+    /* Section reveal animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Navbar underline animation */
+    nav a {
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -3px;
+      background: #ec4899;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    /* Hero image zoom */
+    .hero-img {
+      animation: zoomIn 8s ease-in-out infinite alternate;
+    }
+    @keyframes zoomIn {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur border-b border-white/20">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-lg font-bold">Ravichandra Pathi</h1>
+      <nav class="hidden sm:flex space-x-6 text-sm">
+        <a href="#home" class="hover:text-yellow-300">Home</a>
+        <a href="#services" class="hover:text-yellow-300">Services</a>
+        <a href="#skills" class="hover:text-yellow-300">Skills</a>
+        <a href="#projects" class="hover:text-yellow-300">Projects</a>
+        <a href="#contact" class="hover:text-yellow-300">Contact</a>
+      </nav>
+      <!-- Mobile -->
+      <a href="#contact" class="sm:hidden px-4 py-2 bg-yellow-400 hover:bg-yellow-500 rounded-lg text-sm text-black font-semibold">Hire Me</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto px-6 pt-20 gap-10 reveal">
+    <div class="flex-1 text-center md:text-left space-y-6">
+      
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+        Hi, I am <span class="text-yellow-300">Ravichandra Pathi</span><br/>
+        Web Developer & Python Developer
+      </h2>
+      <p class="text-white/80 max-w-xl">
+        I build clean, responsive web interfaces and automate workflows with Python. 
+        Passionate about data-driven problem solving and learning modern stacks.
+      </p>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="#projects" class="px-6 py-3 bg-yellow-400 text-black font-semibold hover:bg-yellow-500 rounded-lg transition transform hover:scale-105">View Projects</a>
+        <a href="#contact" class="px-6 py-3 bg-white text-black hover:bg-gray-200 rounded-lg transition transform hover:scale-105">Contact</a>
+      </div>
+    </div>
+    <div class="flex-1 flex justify-center">
+      <img src="profile-pic.jpg" alt="Profile photo" class="rounded-xl shadow-xl object-cover hero-img"/>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="min-h-screen flex flex-col justify-center max-w-6xl mx-auto px-6 py-16 reveal">
+    <h2 class="text-3xl font-bold text-center mb-4">How I Work</h2>
+    <p class="text-white/70 text-center mb-10">Simple 3-step flow to deliver value.</p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-6">
+        <h3 class="text-xl font-semibold mb-2">1) Understand & Scope</h3>
+        <p class="text-white/80 text-sm">Gather requirements, define success metrics, and plan the stack.</p>
+      </div>
+      <div class="glass p-6">
+        <h3 class="text-xl font-semibold mb-2">2) Build & Iterate</h3>
+        <p class="text-white/80 text-sm">Develop features in small iterations with feedback loops.</p>
+      </div>
+      <div class="glass p-6">
+        <h3 class="text-xl font-semibold mb-2">3) Deliver & Improve</h3>
+        <p class="text-white/80 text-sm">Ship, test, document, and refine based on real usage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="min-h-screen flex flex-col justify-center bg-black/30 reveal">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-3xl font-bold text-center mb-10">My Skills</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="space-y-5">
+          <p class="text-white/80">
+            Comfortable with front-end fundamentals and Python for scripting & data tasks.
+            Actively learning frameworks and best practices to grow fast as a developer.
+          </p>
+          <div class="flex gap-8 text-2xl font-bold">
+            <div><span class="text-yellow-300">3+</span> Mini Projects</div>
+            <div><span class="text-yellow-300">100%</span> Willing to Learn</div>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="glass p-4">HTML & CSS</div>
+          <div class="glass p-4">JavaScript (Basics)</div>
+          <div class="glass p-4">Python</div>
+          <div class="glass p-4">Flask / FastAPI (Basics)</div>
+          <div class="glass p-4">Pandas & NumPy</div>
+          <div class="glass p-4">SQL & Git</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="min-h-screen flex flex-col justify-center max-w-6xl mx-auto px-6 py-16 reveal">
+    <h2 class="text-3xl font-bold text-center mb-8">My Latest Projects</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a class="glass overflow-hidden block group" href="#" target="_blank" rel="noopener">
+        <img src="https://via.placeholder.com/600x380" alt="Project 1" class="w-full h-44 object-cover group-hover:scale-105 transition-transform"/>
+        <div class="p-4">
+          <h3 class="font-semibold">Responsive Portfolio Website</h3>
+          <p class="text-white/70 text-sm">HTML, Tailwind</p>
+        </div>
+      </a>
+      <a class="glass overflow-hidden block group" href="#" target="_blank" rel="noopener">
+        <img src="https://via.placeholder.com/600x380" alt="Project 2" class="w-full h-44 object-cover group-hover:scale-105 transition-transform"/>
+        <div class="p-4">
+          <h3 class="font-semibold">Python Task Automator</h3>
+          <p class="text-white/70 text-sm">Python, Scripts</p>
+        </div>
+      </a>
+      <a class="glass overflow-hidden block group" href="#" target="_blank" rel="noopener">
+        <img src="https://via.placeholder.com/600x380" alt="Project 3" class="w-full h-44 object-cover group-hover:scale-105 transition-transform"/>
+        <div class="p-4">
+          <h3 class="font-semibold">Data Insights Dashboard</h3>
+          <p class="text-white/70 text-sm">Pandas, Matplotlib</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="min-h-screen flex flex-col justify-center bg-black/30 reveal">
+    <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-3">Let’s talk about your project</h2>
+        <p class="text-white/70 mb-6">I’m open to internships, entry-level roles, and collaboration.</p>
+        <div class="space-y-2 text-white/80">
+          <p><span class="text-yellow-300">Email:</span> 
+            <a href="mailto:chandrapathi5859@gmail.com" class="text-yellow-300 hover:underline">chandrapathi5859@gmail.com</a>
+          </p>
+          <p><span class="text-yellow-300">LinkedIn:</span> 
+            <a href="https://www.linkedin.com/in/ravichandra-pathi-82562a25a/" class="text-yellow-300 hover:underline">LinkedIn Profile</a>
+          </p>
+          <p><span class="text-yellow-300">GitHub:</span> 
+            <a href="https://github.com/ravichandra-5859" class="text-yellow-300 hover:underline">GitHub Profile</a>
+          </p>
+        </div>
+      </div>
+      <form id="contact-form" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required
+          class="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:outline-none"/>
+        <input type="email" name="email" placeholder="Your Email" required
+          class="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:outline-none"/>
+        <input type="text" name="subject" placeholder="Subject"
+          class="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:outline-none"/>
+        <textarea name="message" placeholder="Brief about your project..." rows="4" required
+          class="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:outline-none"></textarea>
+        <button type="submit" class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg transform transition hover:scale-105">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+        emailjs.init("oEa0wZiv7Q7-x-CHl");
+    })();
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('service_4g3lphr', 'template_pepd2r3', this)
+            .then(() => {
+                alert('✅ Message Sent Successfully!');
+                document.getElementById('contact-form').reset();
+            }, (error) => {
+                alert('❌ Failed to send message. Please try again.');
+                console.error('Error:', error);
+            });
+    });
+
+    // Scroll reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const revealTop = el.getBoundingClientRect().top;
+        if (revealTop < windowHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-white/70 text-sm">
+    © 2025 Ravichandra Pathi 
+  </footer>
+
+</body>
+</html>
